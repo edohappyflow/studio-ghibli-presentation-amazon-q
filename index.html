@@ -186,15 +186,15 @@
             </section>
 
             <!-- Slide 10: Quiz Vraag 1 -->
-            <section data-background-color="#FFFACD">
+            <section data-background-color="#FFFACD" data-quiz="1" data-correct="2">
                 <h3>Quiz Vraag 1</h3>
                 <div class="quiz-question">
                     <h4>Welk dier is Totoro?</h4>
                     <div class="quiz-options">
-                        <div class="option fragment">A) Een beer</div>
-                        <div class="option fragment">B) Een konijn</div>
-                        <div class="option fragment correct">C) Een bosgod</div>
-                        <div class="option fragment">D) Een hond</div>
+                        <div class="option fragment" data-option="0">A) Een beer</div>
+                        <div class="option fragment" data-option="1">B) Een konijn</div>
+                        <div class="option fragment" data-option="2">C) Een bosgod</div>
+                        <div class="option fragment" data-option="3">D) Een hond</div>
                     </div>
                     <div class="answer fragment">
                         <h4>✅ Juist! Totoro is een bosgod!</h4>
@@ -203,16 +203,15 @@
             </section>
 
             <!-- Slide 11: Quiz Vraag 2 -->
-            <section data-background-color="#FFFACD">
+            <section data-background-color="#FFFACD" data-quiz="2" data-correct="1">
                 <h3>Quiz Vraag 2</h3>
                 <div class="quiz-question">
                     <h4>Wat was Ponyo eerst?</h4>
                     <div class="quiz-options">
-                        <div class="quiz-options">
-                        <div class="option fragment">A) Een vogel</div>
-                        <div class="option fragment correct">B) Een vis</div>
-                        <div class="option fragment">C) Een kat</div>
-                        <div class="option fragment">D) Een hond</div>
+                        <div class="option fragment" data-option="0">A) Een vogel</div>
+                        <div class="option fragment" data-option="1">B) Een vis</div>
+                        <div class="option fragment" data-option="2">C) Een kat</div>
+                        <div class="option fragment" data-option="3">D) Een hond</div>
                     </div>
                     <div class="answer fragment">
                         <h4>✅ Juist! Ponyo was eerst een magisch visje!</h4>
@@ -221,15 +220,15 @@
             </section>
 
             <!-- Slide 12: Quiz Vraag 3 -->
-            <section data-background-color="#FFFACD">
+            <section data-background-color="#FFFACD" data-quiz="3" data-correct="1">
                 <h3>Quiz Vraag 3</h3>
                 <div class="quiz-question">
                     <h4>Welke kleur heeft Gigi?</h4>
                     <div class="quiz-options">
-                        <div class="option fragment">A) Wit</div>
-                        <div class="option fragment correct">B) Zwart</div>
-                        <div class="option fragment">C) Grijs</div>
-                        <div class="option fragment">D) Bruin</div>
+                        <div class="option fragment" data-option="0">A) Wit</div>
+                        <div class="option fragment" data-option="1">B) Zwart</div>
+                        <div class="option fragment" data-option="2">C) Grijs</div>
+                        <div class="option fragment" data-option="3">D) Bruin</div>
                     </div>
                     <div class="answer fragment">
                         <h4>✅ Juist! Gigi is een zwarte kat!</h4>
@@ -238,15 +237,15 @@
             </section>
 
             <!-- Slide 13: Quiz Vraag 4 -->
-            <section data-background-color="#FFFACD">
+            <section data-background-color="#FFFACD" data-quiz="4" data-correct="1">
                 <h3>Quiz Vraag 4</h3>
                 <div class="quiz-question">
                     <h4>Uit welk land komt Studio Ghibli?</h4>
                     <div class="quiz-options">
-                        <div class="option fragment">A) China</div>
-                        <div class="option fragment correct">B) Japan</div>
-                        <div class="option fragment">C) Korea</div>
-                        <div class="option fragment">D) Amerika</div>
+                        <div class="option fragment" data-option="0">A) China</div>
+                        <div class="option fragment" data-option="1">B) Japan</div>
+                        <div class="option fragment" data-option="2">C) Korea</div>
+                        <div class="option fragment" data-option="3">D) Amerika</div>
                     </div>
                     <div class="answer fragment">
                         <h4>✅ Juist! Studio Ghibli komt uit Japan!</h4>
@@ -307,6 +306,45 @@
             plugins: [ RevealNotes, RevealHighlight ]
         });
 
+        // Quiz interactiviteit
+        Reveal.on('fragmentshown', function(event) {
+            const currentSlide = Reveal.getCurrentSlide();
+            
+            // Check of dit een quiz slide is
+            if (currentSlide.hasAttribute('data-quiz')) {
+                const quizNumber = currentSlide.getAttribute('data-quiz');
+                const correctAnswer = parseInt(currentSlide.getAttribute('data-correct'));
+                
+                // Check of dit het antwoord fragment is (laatste fragment)
+                if (event.fragment.classList.contains('answer')) {
+                    // Highlight het juiste antwoord
+                    const options = currentSlide.querySelectorAll('.option');
+                    options.forEach((option, index) => {
+                        if (index === correctAnswer) {
+                            option.classList.add('correct');
+                            // Kleine animatie voor het juiste antwoord
+                            setTimeout(() => {
+                                option.style.transform = 'scale(1.05)';
+                                setTimeout(() => {
+                                    option.style.transform = 'scale(1)';
+                                }, 200);
+                            }, 100);
+                        }
+                    });
+                }
+            }
+        });
+
+        // Reset quiz styling wanneer we teruggaan
+        Reveal.on('slidechanged', function(event) {
+            // Reset alle quiz opties
+            const allOptions = document.querySelectorAll('.option');
+            allOptions.forEach(option => {
+                option.classList.remove('correct');
+                option.style.transform = 'scale(1)';
+            });
+        });
+
         // Fullscreen functie
         document.addEventListener('keydown', function(event) {
             if (event.key === 'f' || event.key === 'F') {
@@ -316,6 +354,20 @@
                     document.documentElement.requestFullscreen();
                 }
             }
+        });
+
+        // Extra interactiviteit voor quiz opties (optioneel)
+        document.addEventListener('DOMContentLoaded', function() {
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Kleine feedback bij klikken
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
         });
     </script>
 </body>
