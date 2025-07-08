@@ -307,6 +307,8 @@
 .answer h4 {
     color: #27ae60;
     margin: 0;
+    font-size: 1.1em;
+    font-weight: 500;
 }
 
 /* Afsluiting slide */
