@@ -21,7 +21,7 @@
             
             <!-- Slide 1: Opening -->
             <!-- <section data-background-image="images/cover.webp" data-background-size="cover" data-background-position="center"> -->
-            <section data-background-image="images/cover-totoro.avif" data-background-size="cover" data-background-position="center">
+            <section data-background-image="images/cover-totoro.avif" data-background-size="cover" data-background-position="center" class="ken-burns-slide">
                 <div class="opening-slide">
                     <!-- Minimale content om de mooie achtergrond te laten spreken -->
                 </div>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="info-item fragment">
                         <div class="icon">✏️</div>
-                        <h4>Hand getekende</h4>
+                        <h4>Hand getekend</h4>
                     </div>
                     <div class="info-item fragment">
                         <div class="icon">🌿</div>
@@ -97,6 +97,9 @@
 
             <!-- Slide 5: Totoro -->
             <section data-background-color="#E8F5E8">
+                <audio id="totoro-sound" preload="auto">
+                    <source src="sound/totoro-yawns.mp3" type="audio/mpeg">
+                </audio>
                 <div class="character-detail">
                     <div class="character-image">
                         <img src="images/totoro.png" alt="Totoro" class="character-img">
@@ -107,7 +110,7 @@
                             <li class="fragment">Totoro is een vriendelijke bosgod</li>
                             <li class="fragment">Hij helpt altijd kinderen</li>
                             <li class="fragment">Hij eet heel graag eikels</li>
-                            <li class="fragment">Hij maakt een grappig geluid</li>
+                            <li class="fragment">Hij maakt een grappig geluid <button class="audio-button-inline" onclick="playTotoroSound()">🔊</button></li>
                         </ul>
                     </div>
                 </div>
@@ -356,6 +359,15 @@
                 }
             }
         });
+
+        // Totoro geluid functie
+        function playTotoroSound() {
+            const totoroSound = document.getElementById('totoro-sound');
+            if (totoroSound) {
+                totoroSound.currentTime = 0; // Reset naar begin
+                totoroSound.play().catch(e => console.log('Audio play failed:', e));
+            }
+        }
 
         // Reset quiz styling wanneer we teruggaan
         Reveal.on('slidechanged', function(event) {
