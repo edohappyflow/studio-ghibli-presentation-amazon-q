@@ -16,7 +16,6 @@
 .reveal h1 {
     font-size: 2.5em;
     color: darkgreen;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 .reveal h2 {
@@ -53,9 +52,9 @@
 }
 
 .presenter {
-    font-size: 1.3em;
-    color: #e74c3c;
-    font-weight: 600;
+    font-size: 1.5em;
+    color: #2980b9;
+    font-weight: 800;
     margin-top: 30px;
 }
 
@@ -477,6 +476,32 @@
     background-color: transparent !important;
     z-index: 1000;
 }
+/* Eind slide tekst styling */
+
+.end-slide {
+    position: relative;
+    top: 0;
+    height: 100%;
+}
+.end-slide-text {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000;
+    width: 100%;
+}
+
+.end-slide-text h3 {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    margin: 0;
+    letter-spacing: 2px;
+}
+
 /* Character afbeeldingen styling */
 .character-img {
     max-width: 100%;
