@@ -2,12 +2,12 @@
 
 /* Basis styling */
 .reveal {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Lexend', sans-serif;
     color: #2c3e50;
 }
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Lexend', sans-serif;
     font-weight: 600;
     text-transform: none;
     line-height: 1.2;
@@ -87,10 +87,9 @@
 
 .info-item {
     background: rgba(255, 255, 255, 0.8);
-    padding: 25px;
-    border-radius: 15px;
+    padding: 18px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
@@ -99,18 +98,20 @@
 }
 
 .info-item .icon {
-    font-size: 2.5em;
-    margin-bottom: 15px;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 .info-item h4 {
     color: #2c3e50;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-size: 0.9em;
 }
 
 .info-item p {
     color: #7f8c8d;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    margin: 0;
 }
 
 /* Karakter previews */
@@ -123,11 +124,16 @@
 
 .character-preview {
     text-align: center;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
     transition: transform 0.3s ease;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .character-preview:hover {
@@ -135,44 +141,82 @@
 }
 
 .character-icon {
-    font-size: 3em;
-    margin-bottom: 15px;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.character-icon img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
 }
 
 .character-preview h4 {
-    color: #2c3e50;
-    font-size: 1.3em;
+    display: none;
 }
 
 /* Karakter detail slides */
 .character-detail {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 50px;
-    padding: 20px;
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100vh;
+    padding-top: 20px;
 }
 
 .character-image {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding-top: 0;
+}
+
+.character-image h2 {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 2.5em;
+    color: #2c3e50;
     text-align: center;
 }
 
 .character-info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    padding-top: 0;
+}
+
+.character-info h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #2c3e50;
 }
 
 .character-info ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .character-info li {
-    background: rgba(255, 255, 255, 0.8);
-    margin: 15px 0;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: transparent;
+    padding: 10px 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 15px;
     font-size: 1.1em;
+    line-height: 1.4;
+    text-align: center;
+    color: #2c3e50;
 }
 
 /* Placeholder afbeeldingen */
@@ -212,17 +256,14 @@
 /* Japan connecties */
 .japan-connections {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding: 20px;
 }
 
 .connection-item {
-    background: rgba(255, 255, 255, 0.9);
     padding: 30px;
-    border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
@@ -272,7 +313,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto 40px;
 }
 
@@ -282,14 +323,12 @@
     border-radius: 10px;
     font-size: 1.1em;
     font-weight: 500;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .option:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .option.correct {
@@ -327,7 +366,6 @@
     border-radius: 15px;
     font-size: 1.2em;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
@@ -401,3 +439,32 @@
         border: 2px solid #ccc;
     }
 }
+
+/* Subtiele slide nummers */
+.reveal .slide-number {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 18px;
+    color: rgba(44, 62, 80, 0.8);
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+    background-color: transparent !important;
+    z-index: 1000;
+}
+/* Character afbeeldingen styling */
+.character-img {
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    object-fit: contain;
+}
+
