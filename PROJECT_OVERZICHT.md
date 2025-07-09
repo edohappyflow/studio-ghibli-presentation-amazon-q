@@ -28,7 +28,7 @@
 - Visuele info-grid layout
 
 ### 4. **Favoriete Figuren Intro** - Overzicht karakters
-- Preview van Totoro, Ponyo, Gigi
+- Preview van Totoro, Ponyo, Jiji
 - Visuele character previews
 
 ### 5. **Totoro Detail** - Eerste karakter
@@ -41,7 +41,7 @@
 - Animated GIF placeholder
 - Character detail layout
 
-### 7. **Gigi Detail** - Derde karakter
+### 7. **Jiji Detail** - Derde karakter
 - Pratende kat eigenschappen
 - Connectie met Aurélie's liefde voor katten
 - Character detail layout
@@ -57,7 +57,7 @@
 ### 10-13. **Quiz Vragen** - 4 multiple choice vragen
 - Totoro vraag
 - Ponyo vraag  
-- Gigi vraag
+- Jiji vraag
 - Studio Ghibli land vraag
 
 ### 14. **Afsluiting** - Dankwoord en vragen
@@ -71,7 +71,7 @@
 - **Primair:** Groen (#27ae60) - Totoro/natuur thema
 - **Secundair:** Blauw (#2980b9) - Ponyo/water thema  
 - **Accent:** Rood (#e74c3c) - Energie en aandacht
-- **Paars:** (#8e44ad) - Gigi/magie thema
+- **Paars:** (#8e44ad) - Jiji/magie thema
 
 ### Typografie
 - **Font:** Nunito (Google Fonts)

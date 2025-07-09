@@ -94,8 +94,8 @@ Reveal.on('fragmentshown', function(event) {
 - **Opties:** Vogel, **Vis**, Kat, Hond
 - **Correct:** B) Een vis
 
-### Vraag 3: Gigi
-- **Vraag:** "Welke kleur heeft Gigi?"
+### Vraag 3: Jiji
+- **Vraag:** "Welke kleur heeft Jiji?"
 - **Opties:** Wit, **Zwart**, Grijs, Bruin
 - **Correct:** B) Zwart
 

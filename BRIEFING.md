@@ -71,10 +71,10 @@
 - **Speciaal:** Animated gif van Ponyo
 - **Steekwoorden:** Magisch visje, wordt meisje, zee, ham
 
-#### Gigi
+#### Jiji
 - **Karakter:** Zwarte kat, praat met heksen
 - **Eigenschappen:** Beste vriend van Kiki, kan praten
-- **Favoriete scene:** Gigi en Kiki vliegen op bezem
+- **Favoriete scene:** Jiji en Kiki vliegen op bezem
 - **Connectie:** Aurélie's liefde voor katachtigen
 - **Steekwoorden:** Zwarte kat, heksen, Kiki, praten
 
@@ -92,7 +92,7 @@
 - **Vragen:**
   1. "Welk dier is Totoro?" (Antwoord: Bosgod)
   2. "Wat was Ponyo eerst?" (Antwoord: Vis)
-  3. "Welke kleur heeft Gigi?" (Antwoord: Zwart)
+  3. "Welke kleur heeft Jiji?" (Antwoord: Zwart)
   4. "Uit welk land komt Studio Ghibli?" (Antwoord: Japan)
 - **Format:** Multiple choice met fragment reveals
 
@@ -125,7 +125,7 @@
 
 ### Benodigde Content
 - **Logo:** Studio Ghibli logo voor titelslide
-- **Karakters:** Totoro, Ponyo, Gigi (klein en groot formaat)
+- **Karakters:** Totoro, Ponyo, Jiji (klein en groot formaat)
 - **Scenes:** Favoriete scenes per karakter
 - **Animated GIF:** Ponyo bewegende afbeelding
 - **Eindslide:** Kleine versies van alle drie karakters

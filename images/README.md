@@ -20,14 +20,14 @@
 - **Gebruik:** Ponyo karakter slide
 - **Beschrijving:** Bewegende afbeelding van Ponyo, bijvoorbeeld zwemmend of rennend
 
-### 4. Gigi
-- **Bestandsnaam:** `gigi.jpg` of `gigi.png`
+### 4. Jiji
+- **Bestandsnaam:** `Jiji.jpg` of `Jiji.png`
 - **Afmetingen:** 300x300px
-- **Gebruik:** Gigi karakter slide
-- **Beschrijving:** Afbeelding van Gigi de zwarte kat
+- **Gebruik:** Jiji karakter slide
+- **Beschrijving:** Afbeelding van Jiji de zwarte kat
 
 ### 5. Kleine Karakters (Optioneel)
-- **Bestandsnamen:** `totoro-small.png`, `ponyo-small.png`, `gigi-small.png`
+- **Bestandsnamen:** `totoro-small.png`, `ponyo-small.png`, `Jiji-small.png`
 - **Afmetingen:** 100x100px
 - **Gebruik:** Eindslide
 - **Beschrijving:** Kleine versies voor de afsluiting
@@ -69,13 +69,13 @@ Vervang de placeholder divs in `index.html`:
 <img src="images/ponyo.gif" alt="Ponyo" class="character-img">
 ```
 
-#### Gigi Afbeelding
+#### Jiji Afbeelding
 ```html
 <!-- Vervang: -->
-<div class="placeholder-image gigi">🐱 GIGI 🐱</div>
+<div class="placeholder-image Jiji">🐱 Jiji 🐱</div>
 
 <!-- Door: -->
-<img src="images/gigi.jpg" alt="Gigi" class="character-img">
+<img src="images/Jiji.jpg" alt="Jiji" class="character-img">
 ```
 
 ### Stap 3: CSS Aanpassen
@@ -143,7 +143,7 @@ Je kunt de huidige placeholders mooier maken door:
 - [ ] Studio Ghibli logo gevonden
 - [ ] Totoro afbeelding gedownload
 - [ ] Ponyo GIF gevonden
-- [ ] Gigi afbeelding gedownload
+- [ ] Jiji afbeelding gedownload
 - [ ] Afbeeldingen hernoemd
 - [ ] Afbeeldingen geplaatst in images/ map
 - [ ] HTML aangepast

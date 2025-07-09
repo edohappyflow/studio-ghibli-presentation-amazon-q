@@ -55,15 +55,15 @@ Een volledig interactieve RevealJS presentatie over Studio Ghibli voor groep 4 m
 - **Slide 7:** Totoro fullscreen GIF scene
 - **Slide 8:** Ponyo (met details)
 - **Slide 9:** Ponyo fullscreen GIF scene
-- **Slide 10:** Gigi (met details)
-- **Slide 11:** Gigi fullscreen GIF scene
+- **Slide 10:** Jiji (met details)
+- **Slide 11:** Jiji fullscreen GIF scene
 - **Slide 12:** Japan connectie
 
 ### 4. Interactieve Quiz (Slides 13-17, 5 min)
 - **Slide 13:** Quiz introductie
 - **Slide 14:** Quiz Vraag 1 - Wat is Totoro?
 - **Slide 15:** Quiz Vraag 2 - Wat was Ponyo eerst?
-- **Slide 16:** Quiz Vraag 3 - Welke kleur heeft Gigi?
+- **Slide 16:** Quiz Vraag 3 - Welke kleur heeft Jiji?
 - **Slide 17:** Quiz Vraag 4 - Uit welk land komt Studio Ghibli?
 
 ### 5. Afsluiting (Slides 18-19, 2 min)
