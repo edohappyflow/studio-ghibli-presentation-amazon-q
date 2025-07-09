@@ -1,15 +1,20 @@
 # Studio Ghibli Presentatie voor Aurélie
 
-Een interactieve RevealJS presentatie over Studio Ghibli voor groep 4.
+Een volledig interactieve RevealJS presentatie over Studio Ghibli voor groep 4 met geavanceerde quiz functionaliteit.
 
 ## 🎯 Presentatie Overzicht
 
 - **Presentator:** Aurélie
 - **Doelgroep:** ±30 klasgenoten en juf (groep 4)
-- **Duur:** 10-15 minuten
+- **Duur:** 15-20 minuten
 - **Onderwerp:** Studio Ghibli en favoriete karakters
+- **Slides:** 19 slides totaal
+- **Speciale features:** Interactieve quiz, audio effecten, fullscreen GIF scenes
 
 ## 🚀 Snel Starten
+
+### Online Bekijken (Aanbevolen)
+**Live URL:** `https://edohappyflow.github.io/studio-ghibli-presentation-amazon-q`
 
 ### Lokaal Bekijken
 1. Open `index.html` in je browser
@@ -17,13 +22,7 @@ Een interactieve RevealJS presentatie over Studio Ghibli voor groep 4.
 3. Druk op `F` voor fullscreen
 4. Druk op `Escape` voor slide overzicht
 
-### Online Deployment (GitHub Pages)
-1. Upload bestanden naar GitHub repository
-2. Activeer GitHub Pages in repository settings
-3. Kies `main` branch als bron
-4. Presentatie is beschikbaar op: `https://[username].github.io/[repository-name]`
-
-## 📱 Navigatie
+## 📱 Navigatie & Bediening
 
 ### Toetsenbord
 - **Pijltjes:** Navigeer tussen slides
@@ -34,70 +33,239 @@ Een interactieve RevealJS presentatie over Studio Ghibli voor groep 4.
 ### Touch/Smartboard
 - **Swipe:** Links/rechts voor navigatie
 - **Tap:** Klik op slide voor volgende fragment
+- **Quiz interactie:** Klik op antwoorden en knoppen
 
-## 🎨 Presentatie Structuur
+### Progress Bar
+- **Zichtbare voortgang:** Groene balk onderin toont voortgang door alle 19 slides
+- **Smartboard vriendelijk:** Goed zichtbaar op grote schermen
 
-### 1. Introductie (2 min)
-- Openingsvraag over favoriete animatiefilms
-- Persoonlijke introductie
+## 🎨 Presentatie Structuur (19 Slides)
 
-### 2. Over Studio Ghibli (2 min)
-- Wat is Studio Ghibli?
-- Belangrijke kenmerken
+### 1. Opening & Introductie (Slides 1-3, 3 min)
+- **Slide 1:** Ken Burns effect opening met Totoro cover
+- **Slide 2:** Titel slide met presentator info
+- **Slide 3:** Openingsvraag over favoriete animatiefilms
 
-### 3. Favoriete Figuren (6-8 min)
-- **Totoro:** De bosgod
-- **Ponyo:** Het magische visje
-- **Gigi:** De pratende kat
+### 2. Over Studio Ghibli (Slide 4, 2 min)
+- **Slide 4:** Wat is Studio Ghibli? (met bullet points)
 
-### 4. Japan Connectie (2 min)
-- Verbinding met andere Japanse interesses
+### 3. Favoriete Figuren (Slides 5-12, 8 min)
+- **Slide 5:** Introductie "Mijn favorieten"
+- **Slide 6:** Totoro (met audio effect 🔊)
+- **Slide 7:** Totoro fullscreen GIF scene
+- **Slide 8:** Ponyo (met details)
+- **Slide 9:** Ponyo fullscreen GIF scene
+- **Slide 10:** Gigi (met details)
+- **Slide 11:** Gigi fullscreen GIF scene
+- **Slide 12:** Japan connectie
 
-### 5. Quiz (2 min)
-- 4 interactieve vragen
-- Multiple choice format
+### 4. Interactieve Quiz (Slides 13-17, 5 min)
+- **Slide 13:** Quiz introductie
+- **Slide 14:** Quiz Vraag 1 - Wat is Totoro?
+- **Slide 15:** Quiz Vraag 2 - Wat was Ponyo eerst?
+- **Slide 16:** Quiz Vraag 3 - Welke kleur heeft Gigi?
+- **Slide 17:** Quiz Vraag 4 - Uit welk land komt Studio Ghibli?
 
-### 6. Afsluiting (1 min)
-- Dankwoord en vragen
+### 5. Afsluiting (Slides 18-19, 2 min)
+- **Slide 18:** Dankwoord en vragen
+- **Slide 19:** "The End" met Cat Bus goodbye GIF
 
-## 🖼️ Afbeeldingen Vervangen
+## 🎮 Interactieve Quiz Functionaliteit
 
-Momenteel gebruikt de presentatie kleurrijke placeholders. Voor echte afbeeldingen:
+### Hoe de Quiz Werkt
+1. **Selecteer antwoord:** Klik op A, B, C, of D (wordt blauw gemarkeerd)
+2. **Controleer:** Klik op "🔍 Controleer antwoord" button
+3. **Resultaat bekijken:**
+   - **Correct:** Antwoord wordt groen, "✅ **Correct!** [uitleg]"
+   - **Fout:** Antwoord wordt rood, "❌ **Helaas!** [Probeer opnieuw button]"
 
-### Benodigde Afbeeldingen
-1. **Studio Ghibli Logo** (voor titelslide)
-2. **Totoro afbeelding** (300x300px)
-3. **Ponyo animated GIF** (300x300px)
-4. **Gigi afbeelding** (300x300px)
-5. **Kleine karakters** voor eindslide
+### Quiz Features
+- **Flexibele selectie:** Altijd van antwoord wisselen mogelijk
+- **Geen spoilers:** Juiste antwoord alleen zichtbaar bij correct antwoord
+- **Tweede kansen:** "🔄 Probeer opnieuw" button bij foute antwoorden
+- **Educatief:** Trial-and-error learning zonder direct het antwoord te onthullen
+- **Klasinteractie:** Perfect voor groepsdiscussie en stemmen
 
-### Vervangen
-1. Plaats afbeeldingen in `images/` map
-2. Vervang placeholder divs in `index.html`:
-   ```html
-   <!-- Van: -->
-   <div class="placeholder-image totoro">🌳 TOTORO 🌳</div>
-   
-   <!-- Naar: -->
-   <img src="images/totoro.jpg" alt="Totoro" class="character-img">
-   ```
+### Quiz Styling
+- **Witte antwoord opties** voor goede leesbaarheid
+- **Kleurcodering:** Blauw (geselecteerd), groen (correct), rood (fout)
+- **Gecentreerde buttons** met professionele styling
+- **Kleine feedback tekst** voor betere proportie
+
+## 🎵 Audio & Visuele Effecten
+
+### Audio Effecten
+- **Totoro geluid:** Klik op 🔊 icoon bij Totoro slide voor authentiek geluid
+- **Browser compatibiliteit:** Werkt in moderne browsers
+
+### Visuele Effecten
+- **Ken Burns effect:** Opening slide met zoom animatie
+- **Fullscreen GIF scenes:** Na elke karakter voor immersieve ervaring
+- **Smooth overgangen:** Professionele slide transitions
+- **Progress bar:** Zichtbare voortgang indicator
+
+## 🖼️ Afbeeldingen & Media
+
+### Huidige Media (Volledig Geïmplementeerd)
+- ✅ **HD cover afbeelding:** Totoro forest scene (Ken Burns effect)
+- ✅ **Character GIFs:** Totoro rain, Ponyo swimming, Kiki's delivery
+- ✅ **Cat Bus goodbye GIF:** Eindslide
+- ✅ **Audio bestand:** Totoro geluid effect
+- ✅ **Responsive design:** Werkt op alle schermformaten
+
+### Media Optimalisatie
+- **HD kwaliteit:** Geoptimaliseerd voor smartboard presentatie
+- **Snelle laadtijden:** Gecomprimeerde bestanden
+- **Fallback opties:** Werkt ook zonder internet (CDN fallbacks)
 
 ## 🎯 Presentatie Tips voor Aurélie
 
 ### Voor de Presentatie
-- [ ] Oefen de presentatie 2-3 keer
-- [ ] Test op het smartboard van tevoren
-- [ ] Bereid antwoorden voor op mogelijke vragen
-- [ ] Zorg voor backup (offline versie)
+- [ ] Test de presentatie op het smartboard
+- [ ] Oefen de quiz interactie (selecteren → controleren → resultaat)
+- [ ] Test audio functionaliteit (Totoro geluid)
+- [ ] Bereid antwoorden voor op quiz discussies
+- [ ] Zorg voor backup URL of offline versie
 
 ### Tijdens Presenteren
-- **Timing:** Elke slide 1-2 minuten
-- **Steekwoorden:** Gebruik bullets als geheugensteun
-- **Interactie:** Stel vragen bij de quiz
-- **Enthousiasme:** Laat je passie zien!
-- **Ademhaling:** Rustig aan, diep ademhalen
+- **Timing:** 
+  - Introductie: 3 min (slides 1-3)
+  - Studio Ghibli: 2 min (slide 4)
+  - Karakters: 8 min (slides 5-12)
+  - Quiz: 5 min (slides 13-17)
+  - Afsluiting: 2 min (slides 18-19)
+- **Quiz interactie:** Laat de klas stemmen, dan selecteer en controleer
+- **Audio:** Gebruik Totoro geluid voor extra effect
+- **Fullscreen:** F-toets voor optimale weergave
 
 ### Technische Tips
+- **Navigatie:** Pijltjestoetsen voor slide navigatie
+- **Quiz:** Klik antwoord → klik "Controleer antwoord" → bekijk resultaat
+- **Audio:** Klik 🔊 icoon bij Totoro voor geluid
+- **Progress:** Groene balk onderin toont voortgang
+- **Hulp:** Bij problemen: herlaad pagina of gebruik andere browser
+
+## 🔧 Technische Details
+
+### Gebruikte Technologieën
+- **RevealJS 4.3.1:** Presentatie framework
+- **Interactieve JavaScript:** Quiz functionaliteit
+- **CSS Grid/Flexbox:** Responsive layout
+- **CSS Animaties:** Ken Burns effect, smooth transitions
+- **HTML5 Audio:** Totoro geluid effecten
+- **Google Fonts:** Nunito lettertype
+
+### Browser Ondersteuning
+- ✅ **Chrome/Edge:** Volledig ondersteund (aanbevolen)
+- ✅ **Firefox:** Volledig ondersteund
+- ✅ **Safari:** Volledig ondersteund
+- ✅ **Tablets:** Touch navigatie werkt
+- ✅ **Smartboards:** Geoptimaliseerd voor grote schermen
+
+### Performance
+- **Snelle laadtijden:** Geoptimaliseerde media
+- **Responsive:** Werkt op alle schermformaten
+- **Offline capable:** Basis functionaliteit zonder internet
+- **Memory efficient:** Geen memory leaks bij lange presentaties
+
+## 📋 Checklist voor Gebruik
+
+### Voor de Presentatie
+- [ ] URL getest: `https://edohappyflow.github.io/studio-ghibli-presentation-amazon-q`
+- [ ] Smartboard/beamer aangesloten en getest
+- [ ] Internet connectie gecontroleerd
+- [ ] Audio getest (Totoro geluid)
+- [ ] Quiz functionaliteit getest
+- [ ] Fullscreen mode getest (F-toets)
+- [ ] Progress bar zichtbaar
+- [ ] Backup plan klaar (andere browser/offline versie)
+
+### Dag van Presentatie
+- [ ] Browser geopend naar juiste URL
+- [ ] Fullscreen geactiveerd (F-toets)
+- [ ] Audio volume ingesteld
+- [ ] Eerste slide (Ken Burns opening) zichtbaar
+- [ ] Quiz interactie uitgelegd aan klas
+- [ ] Aurélie heeft geoefend met quiz bediening
+
+## 🎨 Aanpassingen Maken
+
+### Kleuren Wijzigen
+Pas kleuren aan in `style.css`:
+```css
+/* Hoofdkleuren */
+:root {
+    --primary-color: #27ae60;
+    --secondary-color: #2980b9;
+    --accent-color: #e74c3c;
+}
+```
+
+### Quiz Aanpassen
+Quiz vragen en antwoorden staan in `index.html`:
+```html
+<section data-quiz="1" data-correct="2">
+    <!-- data-correct="2" betekent dat optie C (index 2) correct is -->
+</section>
+```
+
+### Slides Toevoegen
+Voeg nieuwe slides toe in `index.html`:
+```html
+<section data-background-color="#kleur">
+    <h2>Nieuwe Slide Titel</h2>
+    <p>Inhoud hier...</p>
+</section>
+```
+
+## 🐛 Problemen Oplossen
+
+### Presentatie Laadt Niet
+1. Controleer internet verbinding
+2. Probeer andere browser (Chrome aanbevolen)
+3. Check browser console voor errors (F12)
+4. Gebruik incognito/private mode
+5. Herlaad pagina (Ctrl+F5)
+
+### Quiz Werkt Niet
+1. Klik eerst op een antwoord (wordt blauw)
+2. Klik dan op "Controleer antwoord" button
+3. Bij problemen: ga naar andere slide en terug
+4. Herlaad pagina als laatste optie
+
+### Audio Werkt Niet
+1. Controleer browser audio instellingen
+2. Zorg dat volume niet gedempt is
+3. Probeer andere browser
+4. Audio werkt mogelijk niet op alle apparaten
+
+### Navigatie Problemen
+1. Klik eerst op presentatie om focus te krijgen
+2. Gebruik pijltjestoetsen in plaats van muis
+3. F-toets voor fullscreen
+4. Escape voor slide overzicht
+
+## 📞 Ondersteuning
+
+Voor technische vragen of problemen:
+1. Check deze README eerst
+2. Test in verschillende browsers
+3. Controleer internet verbinding
+4. Maak GitHub issue aan voor bugs
+5. Vraag om hulp van technisch persoon
+
+## 🌟 Succes!
+
+Veel succes met de presentatie, Aurélie! 
+
+Deze interactieve Studio Ghibli presentatie is gemaakt met liefde en zorg, net zoals Studio Ghibli films zelf. De quiz functionaliteit maakt het extra leuk voor groep 4, en de visuele effecten zorgen voor een magische ervaring! ✨
+
+**Live URL:** `https://edohappyflow.github.io/studio-ghibli-presentation-amazon-q`
+
+---
+
+*Made with ❤️ for Aurélie's interactive Studio Ghibli presentation*
+*Laatste update: December 2024 - Volledig interactieve quiz geïmplementeerd*
 - **Navigatie:** Gebruik pijltjestoetsen
 - **Fullscreen:** F-toets voor volledig scherm
 - **Overzicht:** Escape voor slide overzicht
