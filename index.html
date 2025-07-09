@@ -311,6 +311,9 @@
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/notes/notes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/highlight.js"></script>
     
+    <!-- Canvas Confetti Library (meer betrouwbaar) -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    
     <script>
         // RevealJS initialisatie
         Reveal.initialize({
@@ -374,6 +377,94 @@
         // Quiz interactiviteit met geïsoleerde class names
         let selectedAnswers = {};
         
+        // Confetti functie met canvas-confetti library
+        function createConfetti() {
+            console.log("🎉 Confetti functie aangeroepen!");
+            
+            // Studio Ghibli kleuren
+            const ghibliColors = [
+                '#27ae60', // Groen (natuur/bos)
+                '#3498db', // Blauw (lucht/water)
+                '#f39c12', // Oranje (zonsondergang)
+                '#e74c3c', // Rood (Totoro's paraplu)
+                '#9b59b6', // Paars (magie)
+                '#f1c40f', // Geel (zon)
+                '#e67e22', // Oranje (herfst)
+                '#2ecc71'  // Lichtgroen (lente)
+            ];
+            
+            // Hoofdconfetti - GROTER!
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ghibliColors,
+                scalar: 1.5,  // 50% groter
+                shapes: ['square', 'circle'],
+                gravity: 0.8  // Langzamer vallen
+            });
+            
+            // Extra burst van links - GROTER!
+            setTimeout(() => {
+                confetti({
+                    particleCount: 50,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ghibliColors,
+                    scalar: 1.3,  // 30% groter
+                    shapes: ['square', 'circle'],
+                    gravity: 0.8
+                });
+            }, 200);
+            
+            // Derde burst van rechts - GROTER!
+            setTimeout(() => {
+                confetti({
+                    particleCount: 50,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ghibliColors,
+                    scalar: 1.3,  // 30% groter
+                    shapes: ['square', 'circle'],
+                    gravity: 0.8
+                });
+            }, 400);
+        }
+        
+        // Rood knipperend scherm voor foute antwoorden
+        function flashRedScreen() {
+            console.log("❌ Rood scherm knippert!");
+            
+            const flashOverlay = document.createElement('div');
+            flashOverlay.className = 'screen-flash-red';
+            document.body.appendChild(flashOverlay);
+            
+            // Verwijder overlay na animatie (600ms)
+            setTimeout(() => {
+                if (document.body.contains(flashOverlay)) {
+                    document.body.removeChild(flashOverlay);
+                }
+            }, 600);
+        }
+        
+        // TEST FUNCTIE - Verwijder na testen
+        function testConfetti() {
+            console.log("🧪 Test confetti gestart");
+            createConfetti();
+        }
+        
+        // TEST FUNCTIE - Verwijder na testen
+        function testRedFlash() {
+            console.log("🧪 Test rood scherm gestart");
+            flashRedScreen();
+        }
+        
+        // Maak test functies beschikbaar in console
+        window.testConfetti = testConfetti;
+        window.testRedFlash = testRedFlash;
+        
         function selectOption(quizNumber, optionIndex) {
             // Reset alle opties voor deze quiz (inclusief correct/incorrect styling)
             const options = document.querySelectorAll(`#quiz-${quizNumber}-options .quiz-option-item`);
@@ -396,11 +487,15 @@
         }
         
         function checkAnswer(quizNumber) {
+            console.log(`🎯 Checking answer for quiz ${quizNumber}`);
+            
             const selectedAnswer = selectedAnswers[quizNumber];
             const correctAnswer = parseInt(document.querySelector(`[data-quiz="${quizNumber}"]`).getAttribute('data-correct'));
             const options = document.querySelectorAll(`#quiz-${quizNumber}-options .quiz-option-item`);
             const feedback = document.getElementById(`feedback-${quizNumber}`);
             const feedbackText = document.getElementById(`feedback-text-${quizNumber}`);
+            
+            console.log(`Selected: ${selectedAnswer}, Correct: ${correctAnswer}`);
             
             // Reset alle styling
             options.forEach(option => {
@@ -409,15 +504,25 @@
             
             // Als correct antwoord geselecteerd
             if (selectedAnswer === correctAnswer) {
+                console.log("✅ Correct antwoord! Confetti wordt gestart...");
+                
                 // Markeer correct antwoord groen
                 options[correctAnswer].classList.add('quiz-correct');
                 feedback.className = 'quiz-feedback-box quiz-feedback-correct';
                 feedbackText.innerHTML = getCorrectMessage(quizNumber);
+                
+                // 🎉 CONFETTI CELEBRATIE! 🎉
+                createConfetti();
             } else {
+                console.log("❌ Fout antwoord - rood scherm knippert");
+                
                 // Bij fout antwoord: markeer alleen het foute antwoord rood
                 options[selectedAnswer].classList.add('quiz-incorrect');
                 feedback.className = 'quiz-feedback-box quiz-feedback-incorrect';
                 feedbackText.innerHTML = `❌ <strong style="color: #c0392b;">Helaas!</strong> <span onclick="resetQuiz(${quizNumber})" class="quiz-check-button" style="display: inline-block; margin: 10px 0 0 10px;">🔄 Probeer opnieuw</span>`;
+                
+                // 🔴 ROOD KNIPPEREND SCHERM! 🔴
+                flashRedScreen();
             }
             
             // Toon feedback
