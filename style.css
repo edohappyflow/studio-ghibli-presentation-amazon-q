@@ -38,6 +38,7 @@
     margin: 8px 0;
     border-radius: 8px;
     background: white;
+    text-align: left;
 }
 
 .quiz-slide-container .quiz-option-item:hover {
@@ -457,9 +458,11 @@
 .quiz-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 20px;
     max-width: 800px;
     margin: 0 auto 40px;
+    grid-auto-flow: column;
 }
 
 .option {
