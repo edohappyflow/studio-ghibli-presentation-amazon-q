@@ -30,8 +30,9 @@
             <!-- Slide 2: Titel -->
             <section data-background-color="#E8F5E8">
                 <div class="title-slide">
-                    <h1>Mijn presentatie over Studio Ghibli</h1>
-                    <p class="presenter">Door <u>Aurélie</u></p>
+                    <h3>Mijn presentatie over</h3>
+                    <h1><u>Studio Ghibli</u></h1>
+                    <p class="presenter">Door Aurélie</p>
                 </div>
             </section>
 
@@ -40,7 +41,7 @@
                 <div class="question-slide">
                     <h2>Wat is jullie <br>favoriete tekenfilm?</h2>
                     <div class="fragment">
-                        <p>Die van mij is <br><strong>My Neighbour Totoro</strong> <br>van <u>Studio Ghibli</u></p>
+                        <p>Die van mij is <br><strong>"My Neighbour Totoro"</strong> <br>van <u>Studio Ghibli</u></p>
                     </div>
                 </div>
             </section>
@@ -189,7 +190,7 @@
                         <div class="icon">
                             <img src="images/totoro-movie.jpg" alt="Totoro Movie" class="icon-img">
                         </div>
-                        <h4>Anime</h4>
+                        <h4>Ghibli</h4>
                     </div>
                 </div>
             </section>
@@ -207,71 +208,84 @@
             </section>
 
             <!-- Slide 13: Quiz Vraag 1 -->
-            <section data-background-color="#FFFACD" data-quiz="1" data-correct="2">
+            <section data-background-color="#FFFACD" data-quiz="1" data-correct="2" class="quiz-slide-container">
                 <h3>Vraag 1</h3>
                 <div class="quiz-question">
                     <h4>Wat is <u>Totoro</u>?</h4>
-                    <div class="quiz-options">
-                        <div class="option" data-option="0">A) Een beer</div>
-                        <div class="option" data-option="1">B) Een konijn</div>
-                        <div class="option" data-option="2">C) Een bosgod</div>
-                        <div class="option" data-option="3">D) Een hond</div>
+                    <div class="quiz-options" id="quiz-1-options">
+                        <div class="quiz-option-item" data-option="0" onclick="selectOption(1, 0)">A) Een beer</div>
+                        <div class="quiz-option-item" data-option="1" onclick="selectOption(1, 1)">B) Een konijn</div>
+                        <div class="quiz-option-item" data-option="2" onclick="selectOption(1, 2)">C) Een bosgod</div>
+                        <div class="quiz-option-item" data-option="3" onclick="selectOption(1, 3)">D) Een hond</div>
                     </div>
-                    <div class="answer fragment">
-                        <h4>✅ <strong>Correct!</strong> Totoro is een bosgod</h4>
+                    <button class="quiz-check-button" id="check-1" onclick="checkAnswer(1)" style="display: none;">
+                        🔍 Controleer antwoord
+                    </button>
+                    <div class="quiz-feedback-box" id="feedback-1" style="display: none;">
+                        <h4 id="feedback-text-1"></h4>
                     </div>
                 </div>
             </section>
 
             <!-- Slide 14: Quiz Vraag 2 -->
-            <section data-background-color="#FFFACD" data-quiz="2" data-correct="1">
+            <section data-background-color="#FFFACD" data-quiz="2" data-correct="1" class="quiz-slide-container">
                 <h3>Vraag 2</h3>
                 <div class="quiz-question">
                     <h4>Wat was <u>Ponyo</u> eerst?</h4>
-                    <div class="quiz-options">
-                        <div class="option" data-option="0">A) Een vogel</div>
-                        <div class="option" data-option="1">B) Een vis</div>
-                        <div class="option" data-option="2">C) Een kat</div>
-                        <div class="option" data-option="3">D) Een hond</div>
+                    <div class="quiz-options" id="quiz-2-options">
+                        <div class="quiz-option-item" data-option="0" onclick="selectOption(2, 0)">A) Een vogel</div>
+                        <div class="quiz-option-item" data-option="1" onclick="selectOption(2, 1)">B) Een vis</div>
+                        <div class="quiz-option-item" data-option="2" onclick="selectOption(2, 2)">C) Een kat</div>
+                        <div class="quiz-option-item" data-option="3" onclick="selectOption(2, 3)">D) Een hond</div>
                     </div>
-                    <div class="answer fragment">
-                        <h4>✅ <strong>Correct!</strong> Ponyo was eerst een vis</h4>
+                    <button class="quiz-check-button" id="check-2" onclick="checkAnswer(2)" style="display: none;">
+                        🔍 Controleer antwoord
+                    </button>
+                    <div class="quiz-feedback-box" id="feedback-2" style="display: none;">
+                        <h4 id="feedback-text-2"></h4>
                     </div>
                 </div>
             </section>
 
             <!-- Slide 15: Quiz Vraag 3 -->
-            <section data-background-color="#FFFACD" data-quiz="3" data-correct="1">
+            <section data-background-color="#FFFACD" data-quiz="3" data-correct="1" class="quiz-slide-container">
                 <h3>Vraag 3</h3>
                 <div class="quiz-question">
                     <h4>Welke kleur heeft <u>Gigi</u>?</h4>
-                    <div class="quiz-options">
-                        <div class="option" data-option="0">A) Wit</div>
-                        <div class="option" data-option="1">B) Zwart</div>
-                        <div class="option" data-option="2">C) Grijs</div>
-                        <div class="option" data-option="3">D) Bruin</div>
+                    <div class="quiz-options" id="quiz-3-options">
+                        <div class="quiz-option-item" data-option="0" onclick="selectOption(3, 0)">A) Wit</div>
+                        <div class="quiz-option-item" data-option="1" onclick="selectOption(3, 1)">B) Zwart</div>
+                        <div class="quiz-option-item" data-option="2" onclick="selectOption(3, 2)">C) Grijs</div>
+                        <div class="quiz-option-item" data-option="3" onclick="selectOption(3, 3)">D) Bruin</div>
                     </div>
-                    <div class="answer fragment">
-                        <h4>✅ <strong>Correct!</strong> Gigi is zwart</h4>
+                    <button class="quiz-check-button" id="check-3" onclick="checkAnswer(3)" style="display: none;">
+                        🔍 Controleer antwoord
+                    </button>
+                    <div class="quiz-feedback-box" id="feedback-3" style="display: none;">
+                        <h4 id="feedback-text-3"></h4>
                     </div>
                 </div>
             </section>
 
             <!-- Slide 16: Quiz Vraag 4 -->
-            <section data-background-color="#FFFACD" data-quiz="4" data-correct="1">
+            <section data-background-color="#FFFACD" data-quiz="4" data-correct="1" class="quiz-slide-container">
                 <h3>Vraag 4</h3>
                 <div class="quiz-question">
                     <h4>Uit welk land komt <u>Studio Ghibli</u>?</h4>
-                    <div class="quiz-options">
-                        <div class="option" data-option="0">A) China</div>
-                        <div class="option" data-option="1">B) Japan</div>
-                        <div class="option" data-option="2">C) Korea</div>
-                        <div class="option" data-option="3">D) Amerika</div>
+                    <div class="quiz-options" id="quiz-4-options">
+                        <div class="quiz-option-item" data-option="0" onclick="selectOption(4, 0)">A) China</div>
+                        <div class="quiz-option-item" data-option="1" onclick="selectOption(4, 1)">B) Japan</div>
+                        <div class="quiz-option-item" data-option="2" onclick="selectOption(4, 2)">C) Korea</div>
+                        <div class="quiz-option-item" data-option="3" onclick="selectOption(4, 3)">D) Amerika</div>
                     </div>
-                    <div class="answer fragment">
-                        <h4>✅ <strong>Correct!</strong> Studio Ghibli komt uit Japan</h4>
+                    <button class="quiz-check-button" id="check-4" onclick="checkAnswer(4)" style="display: none;">
+                        🔍 Controleer antwoord
+                    </button>
+                    <div class="quiz-feedback-box" id="feedback-4" style="display: none;">
+                        <h4 id="feedback-text-4"></h4>
                     </div>
                 </div>
+            </section>
             </section>
 
             <!-- Slide 17: Afsluiting -->
@@ -359,6 +373,89 @@
             }
         });
 
+        // Quiz interactiviteit met geïsoleerde class names
+        let selectedAnswers = {};
+        
+        function selectOption(quizNumber, optionIndex) {
+            // Reset alle opties voor deze quiz (inclusief correct/incorrect styling)
+            const options = document.querySelectorAll(`#quiz-${quizNumber}-options .quiz-option-item`);
+            options.forEach(option => {
+                option.classList.remove('quiz-selected', 'quiz-correct', 'quiz-incorrect');
+            });
+            
+            // Verberg feedback als deze zichtbaar was
+            document.getElementById(`feedback-${quizNumber}`).style.display = 'none';
+            
+            // Selecteer de gekozen optie
+            const selectedOption = document.querySelector(`#quiz-${quizNumber}-options .quiz-option-item[data-option="${optionIndex}"]`);
+            selectedOption.classList.add('quiz-selected');
+            
+            // Sla selectie op
+            selectedAnswers[quizNumber] = optionIndex;
+            
+            // Toon controleer knop
+            document.getElementById(`check-${quizNumber}`).style.display = 'block';
+        }
+        
+        function checkAnswer(quizNumber) {
+            const selectedAnswer = selectedAnswers[quizNumber];
+            const correctAnswer = parseInt(document.querySelector(`[data-quiz="${quizNumber}"]`).getAttribute('data-correct'));
+            const options = document.querySelectorAll(`#quiz-${quizNumber}-options .quiz-option-item`);
+            const feedback = document.getElementById(`feedback-${quizNumber}`);
+            const feedbackText = document.getElementById(`feedback-text-${quizNumber}`);
+            
+            // Reset alle styling
+            options.forEach(option => {
+                option.classList.remove('quiz-correct', 'quiz-incorrect', 'quiz-selected');
+            });
+            
+            // Als correct antwoord geselecteerd
+            if (selectedAnswer === correctAnswer) {
+                // Markeer correct antwoord groen
+                options[correctAnswer].classList.add('quiz-correct');
+                feedback.className = 'quiz-feedback-box quiz-feedback-correct';
+                feedbackText.innerHTML = getCorrectMessage(quizNumber);
+            } else {
+                // Bij fout antwoord: markeer alleen het foute antwoord rood
+                options[selectedAnswer].classList.add('quiz-incorrect');
+                feedback.className = 'quiz-feedback-box quiz-feedback-incorrect';
+                feedbackText.innerHTML = `❌ <strong style="color: #c0392b;">Helaas!</strong> <span onclick="resetQuiz(${quizNumber})" class="quiz-check-button" style="display: inline-block; margin: 10px 0 0 10px;">🔄 Probeer opnieuw</span>`;
+            }
+            
+            // Toon feedback
+            feedback.style.display = 'block';
+            
+            // Verberg controleer knop
+            document.getElementById(`check-${quizNumber}`).style.display = 'none';
+        }
+        
+        function resetQuiz(quizNumber) {
+            // Reset alle opties voor deze quiz
+            const options = document.querySelectorAll(`#quiz-${quizNumber}-options .quiz-option-item`);
+            options.forEach(option => {
+                option.classList.remove('quiz-selected', 'quiz-correct', 'quiz-incorrect');
+            });
+            
+            // Verberg feedback
+            document.getElementById(`feedback-${quizNumber}`).style.display = 'none';
+            
+            // Verberg controleer knop
+            document.getElementById(`check-${quizNumber}`).style.display = 'none';
+            
+            // Reset selected answer
+            delete selectedAnswers[quizNumber];
+        }
+
+        function getCorrectMessage(quizNumber) {
+            const messages = {
+                1: "✅ <strong style='color: #27ae60;'>Correct!</strong> Totoro is een bosgod",
+                2: "✅ <strong style='color: #27ae60;'>Correct!</strong> Ponyo was eerst een vis", 
+                3: "✅ <strong style='color: #27ae60;'>Correct!</strong> Gigi is zwart",
+                4: "✅ <strong style='color: #27ae60;'>Correct!</strong> Studio Ghibli komt uit Japan"
+            };
+            return messages[quizNumber];
+        }
+
         // Totoro geluid functie
         function playTotoroSound() {
             const totoroSound = document.getElementById('totoro-sound');
@@ -368,14 +465,28 @@
             }
         }
 
-        // Reset quiz styling wanneer we teruggaan
+        // Reset quiz styling wanneer we teruggaan - met geïsoleerde class names
         Reveal.on('slidechanged', function(event) {
-            // Reset alle quiz opties
-            const allOptions = document.querySelectorAll('.option');
-            allOptions.forEach(option => {
-                option.classList.remove('correct');
-                option.style.transform = 'scale(1)';
-            });
+            // Wacht even voordat we resetten om visuele problemen te voorkomen
+            setTimeout(function() {
+                // Reset alle quiz opties met nieuwe class names
+                const allQuizOptions = document.querySelectorAll('.quiz-option-item');
+                allQuizOptions.forEach(option => {
+                    option.classList.remove('quiz-correct', 'quiz-incorrect', 'quiz-selected');
+                    option.style.transform = '';
+                });
+                
+                // Verberg alle controleer knoppen en feedback
+                document.querySelectorAll('.quiz-check-button').forEach(btn => {
+                    btn.style.display = 'none';
+                });
+                document.querySelectorAll('.quiz-feedback-box').forEach(feedback => {
+                    feedback.style.display = 'none';
+                });
+                
+                // Reset selected answers
+                selectedAnswers = {};
+            }, 100);
         });
 
         // Fullscreen functie

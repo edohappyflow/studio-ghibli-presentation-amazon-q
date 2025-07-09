@@ -24,6 +24,95 @@
     }
 }
 
+/* Quiz styling - volledig geïsoleerd met unieke class names */
+.quiz-slide-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.quiz-slide-container .quiz-option-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    background: white;
+}
+
+.quiz-slide-container .quiz-option-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(5px);
+}
+
+.quiz-slide-container .quiz-option-item.quiz-selected {
+    background: rgba(52, 152, 219, 0.3);
+    border: 2px solid #3498db;
+    transform: translateX(10px);
+}
+
+.quiz-slide-container .quiz-option-item.quiz-correct {
+    background: rgba(46, 204, 113, 0.3);
+    border: 2px solid #2ecc71;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.quiz-slide-container .quiz-option-item.quiz-incorrect {
+    background: rgba(231, 76, 60, 0.3);
+    border: 2px solid #e74c3c;
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.quiz-check-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.quiz-check-button:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+}
+
+.quiz-check-button:active {
+    transform: translateY(0);
+}
+
+.quiz-feedback-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.quiz-feedback-box h4 {
+    font-size: 0.9em !important;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+.quiz-feedback-box.quiz-feedback-correct {
+    color: #27ae60;
+}
+
+.quiz-feedback-box.quiz-feedback-incorrect {
+    color: #c0392b;
+}
+
 /* RevealJS Progress Bar styling */
 .reveal .progress {
     height: 10px !important;
@@ -541,7 +630,8 @@
     top: 0;
     height: 100%;
 }
-.end-slide-text {
+/* Eind slide tekst styling - alleen voor laatste slide */
+.reveal .slides section:last-child .end-slide-text {
     position: fixed;
     bottom: 40px;
     left: 50%;
@@ -551,7 +641,7 @@
     width: 100%;
 }
 
-.end-slide-text h3 {
+.reveal .slides section:last-child .end-slide-text h3 {
     color: white;
     font-size: 1.5em;
     font-weight: 600;
