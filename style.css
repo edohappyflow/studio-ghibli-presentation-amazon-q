@@ -1,5 +1,84 @@
 /* Studio Ghibli Presentatie Styling */
 
+/* Peeping Cat animatie voor slide 3 */
+.peeping-cat {
+    position: absolute;
+    bottom: -200px; /* Start volledig buiten beeld */
+    right: 50px;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+    pointer-events: none;
+    animation: catPeep 8s ease-in-out infinite;
+    animation-delay: 3s; /* Start na 3 seconden */
+}
+
+.peeping-cat img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Peeping Cat animatie voor slide 3 */
+.peeping-cat {
+    position: fixed;
+    bottom: -350px; /* Start volledig buiten beeld (veel lager) */
+    left: calc(50% - 400px); /* Links van het midden (verder naar links) */
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+    pointer-events: none;
+    animation: catPeep 12s ease-in-out infinite;
+    animation-delay: 4s; /* Start na 4 seconden */
+}
+
+.peeping-cat img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes catPeep {
+    0% { 
+        transform: translateY(0px); /* Start op bottom: -350px (volledig buiten beeld) */
+        opacity: 1;
+    }
+    /* Langzaam een beetje omhoog gluren */
+    15% { 
+        transform: translateY(-100px); /* -350px + -100px = -450px (komt omhoog) */
+        opacity: 1;
+    }
+    25% { 
+        transform: translateY(-130px); /* -350px + -130px = -480px (meer zichtbaar) */
+        opacity: 1;
+    }
+    /* Even kijken */
+    40% { 
+        transform: translateY(-140px); /* -350px + -140px = -490px (goed zichtbaar) */
+        opacity: 1;
+    }
+    /* Nog iets hoger gluren */
+    50% { 
+        transform: translateY(-100px); /* -350px + -100px = -450px (iets lager) */
+        opacity: 1;
+    }
+    /* Nog even kijken */
+    65% { 
+        transform: translateY(-90px); /* -350px + -90px = -440px (nog iets lager) */
+        opacity: 1;
+    }
+    /* Snel naar beneden zakken */
+    75% { 
+        transform: translateY(40px); /* -350px + 40px = -310px (zakt weg) */
+        opacity: 1;
+    }
+    /* Blijf weg */
+    100% { 
+        transform: translateY(60px); /* -350px + 60px = -290px (volledig weg) */
+        opacity: 1;
+    }
+}
+
 /* Rood knipperend scherm voor foute quiz antwoorden */
 .screen-flash-red {
     position: fixed;
